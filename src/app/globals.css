@@ -149,14 +149,4 @@ html {
   }
 }
 
-/* Example wax texture pattern (requires careful implementation or an actual image) */
-/* .wax-background {
-  background-image: radial-gradient(hsl(var(--secondary)) 1px, transparent 1px);
-  background-size: 10px 10px;
-} */
-
-/* Candle glow effect (example) */
-/* .glow-effect {
-  box-shadow: 0 0 15px 5px hsla(var(--accent), 0.4);
-} */
-```
+/* Removed example comments */

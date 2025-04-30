@@ -57,4 +57,3 @@ export default async function StorePage({ searchParams }: { searchParams?: { [ke
     </div>
   );
 }
-```

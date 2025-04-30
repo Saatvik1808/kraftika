@@ -28,4 +28,3 @@ export function Footer() {
 // Placeholder pages - these should be created if needed
 // You can create these files in src/app/privacy-policy/page.tsx and src/app/terms-of-service/page.tsx
 // For now, they are just links.
-```

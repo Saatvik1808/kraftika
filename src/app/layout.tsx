@@ -1,3 +1,4 @@
+
 import type { Metadata } from 'next';
 import { GeistSans } from 'geist/font/sans';
 import { Playfair_Display } from 'next/font/google'; // Elegant serif font
@@ -42,4 +43,3 @@ export default function RootLayout({
     </html>
   );
 }
-```
