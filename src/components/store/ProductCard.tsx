@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import type { Product } from '@/types/product';
 import { ArrowRight } from 'lucide-react'; // Import icon
+import * as React from 'react'; // Import React
 
 interface ProductCardProps {
   product: Product;
@@ -42,9 +43,10 @@ export function ProductCard({ product, className }: ProductCardProps) {
          <p className="text-lg font-semibold text-primary mt-2">₹ {product.price.toLocaleString()}</p>
       </CardContent>
       <CardFooter className="p-5 md:p-6 pt-0 mt-auto"> {/* Consistent padding */}
-         <Button asChild variant="outline" className="w-full border-primary/50 text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 group/button"> {/* Use Button's asChild prop */}
-          <Link href={`/store/product/${product.id}`} className="flex items-center justify-center">
-             View Details <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover/button:translate-x-1" />
+         <Button asChild variant="outline" className="w-full border-primary/50 text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 group/button">
+          {/* Let Button pass props to Link, and Link render children directly */}
+          <Link href={`/store/product/${product.id}`} className="flex items-center justify-center w-full">
+            View Details <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover/button:translate-x-1" />
           </Link>
         </Button>
       </CardFooter>

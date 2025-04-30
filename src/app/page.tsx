@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { ArrowRight, Sparkles, Feather, Package, Star } from 'lucide-react'; // Added Star icon
 import { ProductCard } from '@/components/store/ProductCard'; // Use ProductCard component
 import type { Product } from '@/types/product'; // Import Product type
+import { cn } from '@/lib/utils'; // Import cn utility function
 
 // Example featured products (replace with actual data)
 const featuredProducts: Product[] = [
