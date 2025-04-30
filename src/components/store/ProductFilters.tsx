@@ -8,8 +8,9 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Label } from "@/components/ui/label";
 import { Slider } from "@/components/ui/slider";
 import { Button } from '@/components/ui/button';
-import { X } from 'lucide-react';
+import { X, Filter } from 'lucide-react'; // Added Filter icon
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { cn } from '@/lib/utils'; // Import cn
 
 interface ProductFiltersProps {
   scents: string[];
@@ -91,7 +92,7 @@ export function ProductFilters({ scents, colors, minPrice, maxPrice, currentPara
    }, [selectedScents, selectedColors, priceRange, pathname, router, searchParams, minPrice, maxPrice]);
 
     // Debounced version for slider
-   const debouncedUpdateUrlParams = useCallback(debounce(updateUrlParams, 500), [updateUrlParams]);
+   const debouncedUpdateUrlParams = useCallback(debounce(updateUrlParams, 300), [updateUrlParams]); // Slightly faster debounce
 
 
   // Effect to update URL when filters change (except slider which uses debounce)
@@ -109,7 +110,8 @@ export function ProductFilters({ scents, colors, minPrice, maxPrice, currentPara
      if(scentsChanged || colorsChanged) {
         updateUrlParams();
      }
-  }, [selectedScents, selectedColors, searchParams, updateUrlParams]);
+     // Price range update is handled by the debounced handler below
+  }, [selectedScents, selectedColors, searchParams, updateUrlParams]); // Removed priceRange dependency
 
     // Handle slider changes with debounce
    const handlePriceChange = (newRange: [number, number]) => {
@@ -127,8 +129,7 @@ export function ProductFilters({ scents, colors, minPrice, maxPrice, currentPara
     setSelected(prev =>
       isChecked ? [...prev, value] : prev.filter(item => item !== value)
     );
-     // Immediate update for checkboxes
-     // The useEffect above will handle the debounced URL update
+     // The useEffect above will handle the URL update for checkboxes
   };
 
   const resetFilters = () => {
@@ -141,30 +142,34 @@ export function ProductFilters({ scents, colors, minPrice, maxPrice, currentPara
    const hasActiveFilters = selectedScents.length > 0 || selectedColors.length > 0 || priceRange[0] > minPrice || priceRange[1] < maxPrice;
 
   return (
-    <Card className="sticky top-20"> {/* Make filters sticky */}
-       <CardHeader className="flex flex-row items-center justify-between pb-2">
-         <CardTitle className="text-lg font-serif">Filters</CardTitle>
+    // Added glassmorphism class and sticky positioning
+    <Card className="sticky top-24 card-glass p-4 md:p-0"> {/* Adjust top offset as needed */}
+       <CardHeader className="flex flex-row items-center justify-between pb-4 border-b border-border/50 md:px-6 md:pt-6">
+         <CardTitle className="text-lg font-serif flex items-center gap-2">
+            <Filter className="h-5 w-5 text-primary" /> Refine Your Search
+         </CardTitle>
           {hasActiveFilters && (
              <Button variant="ghost" size="sm" onClick={resetFilters} className="text-xs text-muted-foreground hover:text-accent">
                <X className="h-3 w-3 mr-1" /> Clear All
              </Button>
           )}
        </CardHeader>
-       <CardContent>
+       <CardContent className="pt-4 md:px-6 md:pb-6">
         <Accordion type="multiple" defaultValue={['scent', 'color', 'price']} className="w-full">
           {/* Scent Filter */}
-          <AccordionItem value="scent">
-            <AccordionTrigger className="text-base font-semibold">Scent</AccordionTrigger>
+          <AccordionItem value="scent" className="border-b-0">
+            <AccordionTrigger className="text-base font-semibold hover:no-underline py-3">Scent Profile</AccordionTrigger>
             <AccordionContent>
-              <div className="space-y-2 pl-1">
+              <div className="space-y-3 pt-2 pl-1 max-h-60 overflow-y-auto"> {/* Added max-height and scroll */}
                 {scents.map(scent => (
                   <div key={scent} className="flex items-center space-x-2">
                     <Checkbox
                       id={`scent-${scent}`}
                       checked={selectedScents.includes(scent)}
                       onCheckedChange={(checked) => handleCheckboxChange('scent', scent, checked)}
+                      aria-label={`Filter by scent: ${scent}`}
                     />
-                    <Label htmlFor={`scent-${scent}`} className="font-normal text-sm cursor-pointer">
+                    <Label htmlFor={`scent-${scent}`} className="font-normal text-sm cursor-pointer hover:text-accent transition-colors">
                       {scent}
                     </Label>
                   </div>
@@ -174,21 +179,22 @@ export function ProductFilters({ scents, colors, minPrice, maxPrice, currentPara
           </AccordionItem>
 
           {/* Color Filter */}
-          <AccordionItem value="color">
-            <AccordionTrigger className="text-base font-semibold">Color</AccordionTrigger>
+          <AccordionItem value="color" className="border-b-0">
+            <AccordionTrigger className="text-base font-semibold hover:no-underline py-3">Wax Color</AccordionTrigger>
             <AccordionContent>
-               <div className="space-y-2 pl-1">
+               <div className="space-y-3 pt-2 pl-1 max-h-60 overflow-y-auto"> {/* Added max-height and scroll */}
                 {colors.map(color => (
                   <div key={color} className="flex items-center space-x-2">
                     <Checkbox
                       id={`color-${color}`}
                        checked={selectedColors.includes(color)}
                        onCheckedChange={(checked) => handleCheckboxChange('color', color, checked)}
-                       style={{ backgroundColor: selectedColors.includes(color) ? `var(--color-${color.toLowerCase()})` : undefined }} // Visual color cue (optional)
+                       aria-label={`Filter by color: ${color}`}
+                       // Removed inline style - prefer Tailwind or CSS variables if needed
                     />
-                     <Label htmlFor={`color-${color}`} className="font-normal text-sm cursor-pointer flex items-center gap-2">
-                       {/* Optional: Color swatch */}
-                       {/* <span className="inline-block w-3 h-3 rounded-sm border" style={{ backgroundColor: `var(--color-${color.toLowerCase()})` }}></span> */}
+                     <Label htmlFor={`color-${color}`} className="font-normal text-sm cursor-pointer hover:text-accent transition-colors flex items-center gap-2">
+                       {/* Example: Add a color swatch using background color */}
+                       {/* <span className={cn("inline-block w-3 h-3 rounded-sm border", `bg-${color.toLowerCase()}-400`)}></span> */}
                        {color}
                      </Label>
                   </div>
@@ -198,20 +204,22 @@ export function ProductFilters({ scents, colors, minPrice, maxPrice, currentPara
           </AccordionItem>
 
           {/* Price Filter */}
-          <AccordionItem value="price">
-            <AccordionTrigger className="text-base font-semibold">Price Range</AccordionTrigger>
+          <AccordionItem value="price" className="border-b-0">
+            <AccordionTrigger className="text-base font-semibold hover:no-underline py-3">Price Range</AccordionTrigger>
             <AccordionContent>
-              <div className="px-1 pt-2">
+              <div className="px-1 pt-4">
                 <Slider
+                  aria-label="Price range slider"
                   min={minPrice}
                   max={maxPrice}
-                  step={10} // Adjust step as needed
+                  step={50} // Adjust step for luxury pricing
                   value={priceRange}
-                   onValueChange={handlePriceChange} // Use the debounced handler
-                  minStepsBetweenThumbs={1} // Optional: prevent thumbs from overlapping completely
-                   className="[&>span:first-child]:h-1 [&>span:last-child]:bg-accent [&>span:last-child>span]:bg-background [&>span:last-child>span]:border-accent [&>span:last-child>span]:h-4 [&>span:last-child>span]:w-4" // Style the slider track and thumbs
+                   onValueChange={handlePriceChange} // Use the correct handler
+                  minStepsBetweenThumbs={1}
+                   // Updated slider styles for better visibility
+                  className="[&>span:first-child]:h-1 [&>span:last-child]:bg-primary [&>span:last-child>span]:bg-background [&>span:last-child>span]:border-primary [&>span:last-child>span]:h-4 [&>span:last-child>span]:w-4 [&>span:last-child>span]:shadow-md"
                 />
-                <div className="flex justify-between text-sm text-muted-foreground mt-3">
+                <div className="flex justify-between text-sm text-muted-foreground mt-4">
                   <span>₹{priceRange[0]}</span>
                   <span>₹{priceRange[1]}</span>
                 </div>
@@ -223,6 +231,3 @@ export function ProductFilters({ scents, colors, minPrice, maxPrice, currentPara
     </Card>
   );
 }
-
-// Helper function to create CSS variables for colors dynamically if needed, or ensure they exist in globals.css
-// Example: Define --color-cream, --color-purple etc. in globals.css or generate them dynamically.

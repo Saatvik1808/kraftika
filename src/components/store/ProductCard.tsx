@@ -5,6 +5,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import type { Product } from '@/types/product';
+import { ArrowRight } from 'lucide-react'; // Import icon
 
 interface ProductCardProps {
   product: Product;
@@ -13,41 +14,40 @@ interface ProductCardProps {
 
 export function ProductCard({ product, className }: ProductCardProps) {
   return (
-    <Card className={cn("overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 flex flex-col h-full group transform hover:-translate-y-1", className)}> {/* Enhanced hover */}
-      <CardHeader className="p-0 relative overflow-hidden"> {/* Added relative and overflow hidden for image zoom */}
-        <Link href={`/store/product/${product.id}`} className="block aspect-[4/3]"> {/* Changed aspect ratio */}
+    <Card className={cn(
+        "overflow-hidden transition-all duration-300 ease-out flex flex-col h-full group card-glass", // Base glassmorphism and group
+        "hover:shadow-2xl hover:border-white/20", // Enhanced hover shadow
+        className // Allow external classes
+    )}>
+      <CardHeader className="p-0 relative overflow-hidden">
+        <Link href={`/store/product/${product.id}`} className="block aspect-[3/4] relative group/image"> {/* Taller aspect ratio, added group/image */}
           <Image
             src={product.imageUrl}
             alt={product.name}
-            fill // Use fill for responsive images within aspect ratio container
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            className="object-cover transition-transform duration-300 group-hover:scale-105" // Image zoom on hover
-            priority={false}
+            fill
+            sizes="(max-width: 768px) 90vw, (max-width: 1200px) 45vw, 30vw" // Adjusted sizes
+            className="object-cover transition-transform duration-500 ease-out group-hover/image:scale-105" // Smoother, slower scale
+            priority={false} // Consider setting priority true for above-the-fold cards if needed
           />
+           {/* Optional: Subtle gradient overlay on image hover */}
+           <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover/image:opacity-100 transition-opacity duration-400"></div>
         </Link>
       </CardHeader>
-      <CardContent className="p-4 flex-grow">
-        <Link href={`/store/product/${product.id}`}>
-          <CardTitle className="text-lg font-serif mb-1 hover:text-accent transition-colors line-clamp-1">{product.name}</CardTitle> {/* Added line-clamp */}
+      <CardContent className="p-5 md:p-6 flex-grow flex flex-col"> {/* Increased padding */}
+        <Link href={`/store/product/${product.id}`} className="block mb-auto">
+          <CardTitle className="text-xl lg:text-2xl font-serif mb-2 group-hover:text-accent transition-colors duration-300 line-clamp-2 leading-tight">{product.name}</CardTitle>
+           {/* Ensure description has a consistent height */}
+          <CardDescription className="text-muted-foreground text-sm mb-4 h-12 line-clamp-2 overflow-hidden leading-relaxed">{product.description}</CardDescription>
         </Link>
-        {/* Ensure description has a consistent height */}
-        <CardDescription className="text-muted-foreground text-sm mb-3 h-10 line-clamp-2 overflow-hidden">{product.description}</CardDescription>
-        <p className="text-base font-semibold text-primary">₹ {product.price.toLocaleString()}</p>
+         <p className="text-lg font-semibold text-primary mt-2">₹ {product.price.toLocaleString()}</p>
       </CardContent>
-      <CardFooter className="p-4 pt-0 mt-auto">
-        <Link href={`/store/product/${product.id}`} className="w-full">
-           <Button variant="outline" className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-colors duration-300"> {/* Adjusted button style */}
-             View Details
-           </Button>
-        </Link>
-        {/* Add to Cart Button (Optional - requires cart logic) */}
-        {/*
-        <Button className="w-full btn-cta-secondary mt-2"> // Example Add to Cart
-          Add to Cart
+      <CardFooter className="p-5 md:p-6 pt-0 mt-auto"> {/* Consistent padding */}
+         <Button asChild variant="outline" className="w-full border-primary/50 text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 group/button"> {/* Use Button's asChild prop */}
+          <Link href={`/store/product/${product.id}`} className="flex items-center justify-center">
+             View Details <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover/button:translate-x-1" />
+          </Link>
         </Button>
-        */}
       </CardFooter>
     </Card>
   );
 }
-```

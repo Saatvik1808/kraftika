@@ -3,126 +3,174 @@ import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import Link from 'next/link';
-import { ArrowRight, Sparkles, Feather, Package } from 'lucide-react'; // Added relevant icons
+import { ArrowRight, Sparkles, Feather, Package, Star } from 'lucide-react'; // Added Star icon
+import { ProductCard } from '@/components/store/ProductCard'; // Use ProductCard component
+import type { Product } from '@/types/product'; // Import Product type
 
-const featuredCandles = [
+// Example featured products (replace with actual data)
+const featuredProducts: Product[] = [
   {
     id: '1',
-    name: 'Amber Glow', // Updated name example
-    description: 'A warm, inviting blend of amber and vanilla.',
-    imageUrl: 'https://picsum.photos/seed/amber/600/400',
-    price: '₹ 899', // Example price
+    name: 'Molten Amber', // Renamed for luxury feel
+    description: 'A deep, resinous warmth with whispers of ancient forests.',
+    imageUrl: 'https://picsum.photos/seed/molten-amber/600/800', // Taller image
+    price: 1299, // Adjusted price for luxury
+    scent: 'Resinous Amber',
+    color: 'Deep Amber',
+    burnTime: 45,
   },
   {
     id: '2',
-    name: 'Spiced Orange Zest', // Updated name example
-    description: 'Uplifting orange notes with a hint of spice.',
-    imageUrl: 'https://picsum.photos/seed/orange/600/400',
-    price: '₹ 849', // Example price
+    name: 'Velvet Orange Blossom', // Renamed
+    description: 'Sweet neroli enveloped in smooth, velvety spice notes.',
+    imageUrl: 'https://picsum.photos/seed/velvet-orange/600/800', // Taller image
+    price: 1199, // Adjusted price
+    scent: 'Floral Spice',
+    color: 'Burnt Orange',
+    burnTime: 45,
   },
     {
     id: '3',
-    name: 'Cozy Hearth', // Updated name example
-    description: 'Smoky woods and warm spices for ultimate comfort.',
-    imageUrl: 'https://picsum.photos/seed/cozy/600/400',
-    price: '₹ 949', // Example price
+    name: 'Hearthside Embers', // Renamed
+    description: 'Smoky birchwood crackling alongside warm vanilla bean.',
+    imageUrl: 'https://picsum.photos/seed/hearthside/600/800', // Taller image
+    price: 1349, // Adjusted price
+    scent: 'Smoky Vanilla',
+    color: 'Warm Grey',
+    burnTime: 50,
   },
 ];
 
+// Example reviews
+const reviews = [
+  { id: 'r1', name: 'Priya K.', rating: 5, comment: "Absolutely divine! The Molten Amber candle fills my home with such a luxurious warmth." },
+  { id: 'r2', name: 'Rohan S.', rating: 4, comment: "Beautifully crafted and the scent lasts for ages. Hearthside Embers is my favorite." },
+  { id: 'r3', name: 'Aisha M.', rating: 5, comment: "The packaging itself felt like a gift. Kraftika candles are truly special." },
+]
+
 export default function Home() {
   return (
-    <div className="space-y-20 md:space-y-24"> {/* Increased spacing */}
-      {/* Hero Section */}
-      <section className="text-center py-20 md:py-28 relative overflow-hidden rounded-lg shadow-lg fade-in wax-background"> {/* Added potential background pattern class */}
-         {/* Optional overlay for better text readability */}
-         <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-background/30 to-transparent z-0"></div>
-         <div className="relative z-10">
-            <h1 className="text-4xl md:text-6xl font-serif font-bold mb-5 text-primary drop-shadow-sm">
-             Ignite Your Senses with Kraftika {/* Updated Brand Name */}
+    <div className="space-y-24 md:space-y-32"> {/* Increased spacing significantly */}
+
+      {/* Hero Section - Conceptual Parallax Example */}
+      <section className="relative h-[80vh] md:h-[90vh] flex items-center justify-center text-center overflow-hidden parallax-container">
+         {/* Background Layer (Moves slower) */}
+         <div
+           className="absolute inset-0 z-0 parallax-layer parallax-layer-back bg-gradient-to-br from-amber-100 via-orange-200 to-amber-200 dark:from-amber-900 dark:via-orange-950 dark:to-amber-950 opacity-50 blur-xl"
+           // style={{ backgroundImage: "url('/path/to/subtle-texture.png')" }} // Optional subtle texture
+           ></div>
+           {/* Optional: Floating particles effect (requires JS/CSS animation library) */}
+           {/* <div className="absolute inset-0 z-[1] pointer-events-none overflow-hidden"> [Floating Particles Here] </div> */}
+
+         {/* Content Layer (Base) */}
+         <div className="relative z-10 p-4 parallax-content text-foreground">
+             {/* Placeholder for 3D Candle Visual */}
+             <div className="mb-8 mx-auto w-48 h-64 md:w-64 md:h-80 bg-gradient-to-br from-amber-300 to-orange-500 rounded-lg shadow-2xl flex items-center justify-center flicker-effect glow-effect">
+                <span className="text-background/70 text-sm">[3D Candle Render/Video]</span>
+                {/* Or use an Image component: */}
+                {/* <Image src="/path/to/hero-candle.png" alt="Kraftika Hero Candle" width={256} height={320} priority className="object-contain"/> */}
+             </div>
+
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold mb-5 text-primary drop-shadow-lg fade-in">
+             Ignite Your Atmosphere.
             </h1>
-            <p className="text-lg md:text-xl text-foreground/90 mb-10 max-w-3xl mx-auto leading-relaxed">
-             Experience the artisanal warmth of handcrafted scented candles, made with 100% natural soy wax and eco-friendly wicks.
+            <p className="text-lg md:text-xl text-foreground/90 mb-10 max-w-3xl mx-auto leading-relaxed fade-in fade-in-delay-1">
+             Discover Kraftika: Where artistry meets aroma in luxury handcrafted candles.
             </p>
-            <Link href="/store">
+            <Link href="/store" className="fade-in fade-in-delay-2">
              <Button size="lg" className="btn-cta"> {/* Use prominent CTA class */}
-                Explore Our Collection <ArrowRight className="ml-2 h-5 w-5" />
+                Explore the Collections <ArrowRight className="ml-2 h-5 w-5" />
              </Button>
             </Link>
          </div>
       </section>
 
-       {/* Why Choose Us Section */}
-      <section className="grid md:grid-cols-3 gap-10 text-center fade-in fade-in-delay-1">
-        <div className="p-6 rounded-lg transition-transform transform hover:scale-105"> {/* Added hover effect */}
-           <Package className="h-12 w-12 mx-auto mb-4 text-accent" /> {/* Changed icon */}
-          <h3 className="text-xl font-semibold mb-2 font-serif">Natural Ingredients</h3>
-          <p className="text-muted-foreground">Pure soy wax & eco-wicks for a clean, healthy burn.</p>
+       {/* Why Choose Kraftika Section - Glassmorphism Cards */}
+      <section className="grid md:grid-cols-3 gap-8 md:gap-12 text-center fade-in fade-in-delay-1">
+        <div className="p-8 rounded-xl card-glass interactive-card"> {/* Glassmorphism + interactive */}
+           <Package className="h-12 w-12 mx-auto mb-5 text-accent drop-shadow-md" />
+          <h3 className="text-xl font-semibold mb-3 font-serif text-primary">Exquisite Ingredients</h3>
+          <p className="text-muted-foreground">Pure, natural soy wax & premium eco-wicks for a flawless burn.</p>
         </div>
-         <div className="p-6 rounded-lg transition-transform transform hover:scale-105"> {/* Added hover effect */}
-           <Feather className="h-12 w-12 mx-auto mb-4 text-accent" /> {/* Changed icon */}
-          <h3 className="text-xl font-semibold mb-2 font-serif">Artisan Crafted</h3>
-          <p className="text-muted-foreground">Hand-poured with passion and precision in India.</p>
+         <div className="p-8 rounded-xl card-glass interactive-card"> {/* Glassmorphism + interactive */}
+           <Feather className="h-12 w-12 mx-auto mb-5 text-accent drop-shadow-md" />
+          <h3 className="text-xl font-semibold mb-3 font-serif text-primary">Artisan Crafted</h3>
+          <p className="text-muted-foreground">Meticulously hand-poured with passion in India.</p>
         </div>
-         <div className="p-6 rounded-lg transition-transform transform hover:scale-105"> {/* Added hover effect */}
-            <Sparkles className="h-12 w-12 mx-auto mb-4 text-accent" /> {/* Changed icon */}
-          <h3 className="text-xl font-semibold mb-2 font-serif">Lasting Fragrance</h3>
-          <p className="text-muted-foreground">Enjoy rich aromas for up to 40 hours per candle.</p>
+         <div className="p-8 rounded-xl card-glass interactive-card"> {/* Glassmorphism + interactive */}
+            <Sparkles className="h-12 w-12 mx-auto mb-5 text-accent drop-shadow-md" />
+          <h3 className="text-xl font-semibold mb-3 font-serif text-primary">Enchanting Fragrance</h3>
+          <p className="text-muted-foreground">Complex, long-lasting scents that transform your space.</p>
         </div>
       </section>
 
-      {/* Featured Candles Section */}
+      {/* Featured Collection Section */}
       <section className="fade-in fade-in-delay-2">
-        <h2 className="text-3xl md:text-4xl font-serif font-semibold text-center mb-12 text-primary">
-          Featured Creations
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold text-center mb-16 text-primary">
+          Signature Collection
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10"> {/* Increased gap */}
-          {featuredCandles.map((candle, index) => (
-            <Card key={candle.id} className="overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 group"> {/* Enhanced hover effect */}
-              <CardHeader className="p-0 relative">
-                 <div className="aspect-[4/3] overflow-hidden"> {/* Ensure consistent aspect ratio */}
-                    <Image
-                      src={candle.imageUrl}
-                      alt={candle.name}
-                      width={600}
-                      height={450} // Adjusted height for 4:3
-                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" // Image zoom on hover
-                    />
-                 </div>
-              </CardHeader>
-              <CardContent className="p-6">
-                <CardTitle className="text-xl font-serif mb-2 group-hover:text-accent transition-colors">{candle.name}</CardTitle>
-                <CardDescription className="text-muted-foreground mb-4 h-10 overflow-hidden">{candle.description}</CardDescription> {/* Fixed height for description */}
-                <p className="text-lg font-semibold text-primary">{candle.price}</p>
-              </CardContent>
-               <CardFooter className="p-6 pt-0">
-                 <Link href={`/store/product/${candle.id}`} className="w-full">
-                    <Button variant="outline" className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-colors duration-300">
-                    View Details
-                    </Button>
-                 </Link>
-              </CardFooter>
-            </Card>
+        {/* TODO: Replace with interactive carousel component */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-12">
+          {featuredProducts.map((product, index) => (
+            <ProductCard
+               key={product.id}
+               product={product}
+               className={`fade-in fade-in-delay-${(index % 3) + 3} interactive-card`} // Apply animation + interactive class
+             />
           ))}
         </div>
-        <div className="text-center mt-16">
+        <div className="text-center mt-20">
            <Link href="/store">
-             <Button variant="link" className="text-accent hover:text-accent/90 text-lg group">
-               Discover All Candles <ArrowRight className="ml-1 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
+             <Button variant="link" className="text-accent hover:text-accent/90 text-xl group font-medium">
+               View All Creations <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
              </Button>
            </Link>
          </div>
       </section>
 
-      {/* Call to Action Section */}
-      <section className="bg-gradient-to-r from-secondary to-accent/20 rounded-lg p-10 md:p-16 text-center fade-in fade-in-delay-3 glow-effect"> {/* Added gradient and glow placeholder */}
-         <h2 className="text-2xl md:text-3xl font-serif font-semibold mb-5 text-primary">Find Your Perfect Ambiance</h2>
-         <p className="text-muted-foreground mb-8 max-w-xl mx-auto">Browse our curated collection and let Kraftika candles transform your space.</p>
-         <Link href="/store">
-           <Button size="lg" className="btn-cta-secondary"> {/* Use prominent secondary CTA class */}
-             Visit Our Store
-           </Button>
-         </Link>
+      {/* Customer Reviews Section - Placeholder for Interactive Carousel */}
+       <section className="fade-in fade-in-delay-3 bg-secondary/30 dark:bg-secondary/10 py-16 md:py-20 rounded-xl overflow-hidden">
+         <h2 className="text-3xl md:text-4xl font-serif font-semibold text-center mb-12 text-primary">
+           Kind Words From Our Collectors
+         </h2>
+         {/* TODO: Implement an interactive carousel (e.g., using Swiper.js or similar) */}
+         <div className="flex space-x-8 px-8 overflow-x-auto pb-4 snap-x snap-mandatory">
+            {reviews.map((review, index) => (
+             <div key={review.id} className={`snap-center shrink-0 w-80 md:w-96 p-6 rounded-lg card-glass fade-in fade-in-delay-${(index % 3) + 4}`}>
+                <div className="flex items-center mb-3">
+                    {[...Array(5)].map((_, i) => (
+                        <Star key={i} className={cn("h-5 w-5", i < review.rating ? "text-accent fill-accent" : "text-muted-foreground/50")}/>
+                    ))}
+                </div>
+                 <p className="text-foreground/90 italic mb-4">"{review.comment}"</p>
+                 <p className="text-sm font-semibold text-primary">- {review.name}</p>
+             </div>
+           ))}
+         </div>
+          <p className="text-center text-muted-foreground mt-6 text-sm">[Interactive Carousel Placeholder]</p>
        </section>
+
+
+      {/* Call to Action Section */}
+      <section className="bg-gradient-to-r from-amber-200 via-orange-300 to-amber-300 dark:from-amber-900 dark:via-orange-950 dark:to-amber-950 rounded-xl p-12 md:p-20 text-center fade-in fade-in-delay-4 relative overflow-hidden">
+         {/* Subtle glow effect */}
+          <div className="absolute -inset-10 bg-accent/10 blur-3xl rounded-full animate-pulse duration-[5s]"></div>
+          <div className="relative z-10">
+             <h2 className="text-3xl md:text-4xl font-serif font-semibold mb-6 text-primary">Craft Your Perfect Moment</h2>
+             <p className="text-lg text-foreground/80 mb-10 max-w-xl mx-auto">Find the Kraftika candle that speaks to your soul and elevates your everyday.</p>
+             <Link href="/store">
+               <Button size="lg" className="btn-cta-secondary"> {/* Use prominent secondary CTA class */}
+                 Shop Now & Indulge
+               </Button>
+             </Link>
+          </div>
+       </section>
+
+        {/* TODO: Implement other sections */}
+        {/* - Scent Customizer */}
+        {/* - Gift Builder */}
+        {/* - Crafting Story Section */}
+        {/* - Subscription Section */}
     </div>
   );
 }

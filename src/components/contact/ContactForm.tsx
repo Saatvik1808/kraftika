@@ -19,23 +19,28 @@ import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { sendContactEmail } from "./actions"; // Server action import
 import * as React from "react";
+import { Loader2 } from "lucide-react"; // Import loader icon
 
+// Regex allows optional '+' and spaces/hyphens, standard international formats
 const phoneRegex = new RegExp(
-  /^([+]?[\s0-9]+)?(\d{3}|[(]?[0-9]+[)])?([-]?[\s]?[0-9])+$/
+  /^\+?(\d{1,4})?[-.\s]?(\(?\d{1,4}\)?[-.\s]?)?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}$/
 );
 
 const formSchema = z.object({
   name: z.string().min(2, {
     message: "Name must be at least 2 characters.",
-  }),
-  phone: z.string().regex(phoneRegex, { message: "Invalid phone number format." }).optional().or(z.literal('')), // Optional phone
+  }).max(100, { message: "Name cannot exceed 100 characters."}),
+  phone: z.string()
+        .regex(phoneRegex, { message: "Please enter a valid phone number." })
+        .optional()
+        .or(z.literal('')), // Optional and allows empty string
   email: z.string().email({
     message: "Please enter a valid email address.",
   }),
   message: z.string().min(10, {
     message: "Message must be at least 10 characters.",
-  }).max(500, {
-    message: "Message must not exceed 500 characters.",
+  }).max(1000, { // Increased max length
+    message: "Message must not exceed 1000 characters.",
   }),
 });
 
@@ -62,19 +67,20 @@ export function ContactForm() {
 
       if (result.success) {
         toast({
-          title: "Message Sent!",
-          description: "Thank you for contacting us. We'll get back to you soon.",
-          variant: 'default', // Use default toast style
+          title: "Message Received!",
+          description: "Thank you for reaching out. We'll connect with you shortly.",
+           // Use a success variant if defined, otherwise default
+           // variant: 'success'
         });
         form.reset(); // Reset form fields
       } else {
-         throw new Error(result.error || "An unknown error occurred.");
+         throw new Error(result.error || "An unknown error occurred while sending.");
       }
     } catch (error: any) {
-       console.error("Failed to send message:", error);
+       console.error("Contact form submission failed:", error);
       toast({
-        title: "Error Sending Message",
-        description: error.message || "Could not send your message. Please try again later.",
+        title: "Oops! Sending Failed",
+        description: error.message || "Could not send your message at this time. Please try again later or email us directly.",
         variant: "destructive",
       });
     } finally {
@@ -91,9 +97,9 @@ export function ContactForm() {
           name="name"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Name</FormLabel>
+              <FormLabel className="text-foreground/80">Full Name</FormLabel>
               <FormControl>
-                <Input placeholder="Your Name" {...field} />
+                <Input placeholder="Enter your name" {...field} className="bg-input border-border/70 focus:border-primary" />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -104,9 +110,9 @@ export function ContactForm() {
           name="phone"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Phone Number (Optional)</FormLabel>
+              <FormLabel className="text-foreground/80">Phone Number <span className="text-xs text-muted-foreground">(Optional)</span></FormLabel>
               <FormControl>
-                <Input type="tel" placeholder="Your Phone Number" {...field} />
+                <Input type="tel" placeholder="Your contact number" {...field} className="bg-input border-border/70 focus:border-primary" />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -117,9 +123,9 @@ export function ContactForm() {
           name="email"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Email</FormLabel>
+              <FormLabel className="text-foreground/80">Email Address</FormLabel>
               <FormControl>
-                <Input type="email" placeholder="your.email@example.com" {...field} />
+                <Input type="email" placeholder="your.email@example.com" {...field} className="bg-input border-border/70 focus:border-primary" />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -130,11 +136,11 @@ export function ContactForm() {
           name="message"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Message</FormLabel>
+              <FormLabel className="text-foreground/80">Your Message</FormLabel>
               <FormControl>
                 <Textarea
-                  placeholder="Tell us how we can help you..."
-                  className="min-h-[120px]"
+                  placeholder="Share your thoughts, questions, or inquiries here..."
+                  className="min-h-[150px] bg-input border-border/70 focus:border-primary resize-none" // Increased height, disabled resize
                   {...field}
                 />
               </FormControl>
@@ -142,11 +148,16 @@ export function ContactForm() {
             </FormItem>
           )}
         />
-        <Button type="submit" className="w-full btn-cta" disabled={isSubmitting}> {/* Used btn-cta class */}
-          {isSubmitting ? 'Sending...' : 'Send Message'}
+        <Button type="submit" className="w-full btn-cta py-3" disabled={isSubmitting}> {/* Used btn-cta class, increased padding */}
+           {isSubmitting ? (
+             <>
+               <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Sending...
+             </>
+            ) : (
+              'Send Your Message'
+            )}
         </Button>
       </form>
     </Form>
   );
 }
-```

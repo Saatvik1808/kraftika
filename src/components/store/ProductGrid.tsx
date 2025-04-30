@@ -6,7 +6,7 @@ import type { Product } from '@/types/product';
 import { useSearchParams } from 'next/navigation';
 import { useMemo } from 'react';
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
-import { Info } from 'lucide-react';
+import { Flame } from 'lucide-react'; // Changed icon
 
 interface ProductGridProps {
   allProducts: Product[];
@@ -36,11 +36,11 @@ export function ProductGrid({ allProducts, searchParams }: ProductGridProps) {
 
   if (filteredProducts.length === 0) {
     return (
-       <Alert className="mt-8 bg-secondary">
-         <Info className="h-4 w-4" />
-         <AlertTitle>No Candles Found</AlertTitle>
+       <Alert className="mt-10 bg-secondary/50 dark:bg-secondary/20 card-glass"> {/* Adjusted styling */}
+         <Flame className="h-5 w-5 text-accent" /> {/* Changed Icon */}
+         <AlertTitle className="font-serif text-primary">No Flames Found Yet...</AlertTitle>
          <AlertDescription>
-           No candles match your current filter selections. Try adjusting your filters or viewing the full collection.
+           No candles match your current filter selections. Try adjusting the filters or explore our full collection to find your perfect light.
          </AlertDescription>
        </Alert>
     )
@@ -48,9 +48,14 @@ export function ProductGrid({ allProducts, searchParams }: ProductGridProps) {
 
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    // Increased gap for more breathing room
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
       {filteredProducts.map((product, index) => (
-        <ProductCard key={product.id} product={product} className={`fade-in fade-in-delay-${(index % 9) + 1}`} /> // Stagger animation
+        <ProductCard
+            key={product.id}
+            product={product}
+            className={`fade-in fade-in-delay-${(index % 9) + 1} interactive-card`} // Added interactive class
+        />
       ))}
     </div>
   );
