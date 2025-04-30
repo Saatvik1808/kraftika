@@ -13,11 +13,18 @@ const formSchema = z.object({
   name: z.string().min(2),
   phone: z.string().regex(phoneRegex).optional().or(z.literal('')),
   email: z.string().email(),
-  message: z.string().min(10).max(500),
+  message: z.string().min(10).max(1000), // Increased max length to match client
 });
 
 type ContactFormData = z.infer<typeof formSchema>;
 
+/**
+ * Sends a contact email using the provided form data.
+ * Validates the data on the server before attempting to send.
+ *
+ * @param formData The contact form data.
+ * @returns An object indicating success or failure, with an optional error message.
+ */
 export async function sendContactEmail(formData: ContactFormData): Promise<{ success: boolean; error?: string }> {
   try {
     // Validate the data on the server side
@@ -55,11 +62,12 @@ export async function sendContactEmail(formData: ContactFormData): Promise<{ suc
   } catch (error) {
      console.error("Error processing contact form:", error);
      if (error instanceof z.ZodError) {
-       return { success: false, error: "Invalid form data provided." };
+       // Provide a more specific error message for validation failures
+       const formattedErrors = error.errors.map(e => `${e.path.join('.')}: ${e.message}`).join(', ');
+       return { success: false, error: `Invalid form data: ${formattedErrors}` };
      }
      // Log the detailed error on the server for debugging
      console.error('Detailed error sending email:', error);
     return { success: false, error: "Failed to send message due to a server error." };
   }
 }
-```
