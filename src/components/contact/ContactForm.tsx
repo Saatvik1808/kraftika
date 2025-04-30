@@ -64,6 +64,7 @@ export function ContactForm() {
         toast({
           title: "Message Sent!",
           description: "Thank you for contacting us. We'll get back to you soon.",
+          variant: 'default', // Use default toast style
         });
         form.reset(); // Reset form fields
       } else {
@@ -141,10 +142,11 @@ export function ContactForm() {
             </FormItem>
           )}
         />
-        <Button type="submit" className="w-full bg-accent text-accent-foreground hover:bg-accent/90" disabled={isSubmitting}>
+        <Button type="submit" className="w-full btn-cta" disabled={isSubmitting}> {/* Used btn-cta class */}
           {isSubmitting ? 'Sending...' : 'Send Message'}
         </Button>
       </form>
     </Form>
   );
 }
+```

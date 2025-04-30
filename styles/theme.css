@@ -1,0 +1,1282 @@
+ /* Dark Brownish
+Orange */<?xml version="1.0" encoding="UTF-8"?>
+<changes>
+  <change>
+    <file>./styles/theme.css</file>
+    <description>Updated theme styles</description>
+    <content><![CDATA[ /* Dark Brownish
+Orange */
+
+    --card: 25 20% 15%; /* Slightly lighter dark */
+    --card-foreground: 40 40% 90%;
+
+    --popover:<?xml version="1.0" encoding="UTF-8"?>
+<changes>
+  <change>
+    <file>./styles/theme.css</file>
+    <description>Updated theme styles</description>
+    <content><![CDATA[ /* Dark Brownish
+Orange */
+
+    --card: 25 20% 15%; /* Slightly lighter dark */
+    --card-foreground: 40 40% 90%;
+
+    --popover: 25 20% 10%; /* Even darker */
+    --popover-foreground: 40 40% 90%;
+
+    --primary: 35 80% 65%; /* Lighter Burnt Orange for contrast */<?xml version="1.0" encoding="UTF-8"?>
+<changes>
+  <change>
+    <file>./styles/theme.css</file>
+    <description>Updated theme styles</description>
+    <content><![CDATA[ /* Dark Brownish
+Orange */
+
+    --card: 25 20% 15%; /* Slightly lighter dark */
+    --card-foreground: 40 40% 90%;
+
+    --popover: 25 20% 10%; /* Even darker */
+    --popover-foreground: 40 40% 90%;
+
+    --primary: 35 80% 65%; /* Lighter Burnt Orange for contrast */
+    --primary-foreground: 25 40% 10%; /* Very Dark Brownish Orange */
+
+    --secondary: 30 30% 25%; /* Muted dark orange */
+    --secondary-foreground: 40 40<?xml version="1.0" encoding="UTF-8"?>
+<changes>
+  <change>
+    <file>./styles/theme.css</file>
+    <description>Updated theme styles</description>
+    <content><![CDATA[ /* Dark Brownish
+Orange */
+
+    --card: 25 20% 15%; /* Slightly lighter dark */
+    --card-foreground: 40 40% 90%;
+
+    --popover: 25 20% 10%; /* Even darker */
+    --popover-foreground: 40 40% 90%;
+
+    --primary: 35 80% 65%; /* Lighter Burnt Orange for contrast */
+    --primary-foreground: 25 40% 10%; /* Very Dark Brownish Orange */
+
+    --secondary: 30 30% 25%; /* Muted dark orange */
+    --secondary-foreground: 40 40% 85%; /* Slightly muted light cream */
+
+    --muted: 30 30% 20%;
+    --muted-foreground: 40 40% 65%; /* Dimmed light cream */
+
+    --accent:<?xml version="1.0" encoding="UTF-8"?>
+<changes>
+  <change>
+    <file>./styles/theme.css</file>
+    <description>Updated theme styles</description>
+    <content><![CDATA[ /* Dark Brownish
+Orange */
+
+    --card: 25 20% 15%; /* Slightly lighter dark */
+    --card-foreground: 40 40% 90%;
+
+    --popover: 25 20% 10%; /* Even darker */
+    --popover-foreground: 40 40% 90%;
+
+    --primary: 35 80% 65%; /* Lighter Burnt Orange for contrast */
+    --primary-foreground: 25 40% 10%; /* Very Dark Brownish Orange */
+
+    --secondary: 30 30% 25%; /* Muted dark orange */
+    --secondary-foreground: 40 40% 85%; /* Slightly muted light cream */
+
+    --muted: 30 30% 20%;
+    --muted-foreground: 40 40% 65%; /* Dimmed light cream */
+
+    --accent: 40 90% 60%; /* Vibrant Amber/Gold (can stay bright) */
+    --accent-foreground: 25 40% 10%; /* Very Dark Brownish Orange */
+
+    --destructive: 0 62.8%<?xml version="1.0" encoding="UTF-8"?>
+<changes>
+  <change>
+    <file>./styles/theme.css</file>
+    <description>Updated theme styles</description>
+    <content><![CDATA[ /* Dark Brownish
+Orange */
+
+    --card: 25 20% 15%; /* Slightly lighter dark */
+    --card-foreground: 40 40% 90%;
+
+    --popover: 25 20% 10%; /* Even darker */
+    --popover-foreground: 40 40% 90%;
+
+    --primary: 35 80% 65%; /* Lighter Burnt Orange for contrast */
+    --primary-foreground: 25 40% 10%; /* Very Dark Brownish Orange */
+
+    --secondary: 30 30% 25%; /* Muted dark orange */
+    --secondary-foreground: 40 40% 85%; /* Slightly muted light cream */
+
+    --muted: 30 30% 20%;
+    --muted-foreground: 40 40% 65%; /* Dimmed light cream */
+
+    --accent: 40 90% 60%; /* Vibrant Amber/Gold (can stay bright) */
+    --accent-foreground: 25 40% 10%; /* Very Dark Brownish Orange */
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 30 25% 30%; /* Dark orange border */
+    --input: 30 25% 30%;<?xml version="1.0" encoding="UTF-8"?>
+<changes>
+  <change>
+    <file>./styles/theme.css</file>
+    <description>Updated theme styles</description>
+    <content><![CDATA[ /* Dark Brownish
+Orange */
+
+    --card: 25 20% 15%; /* Slightly lighter dark */
+    --card-foreground: 40 40% 90%;
+
+    --popover: 25 20% 10%; /* Even darker */
+    --popover-foreground: 40 40% 90%;
+
+    --primary: 35 80% 65%; /* Lighter Burnt Orange for contrast */
+    --primary-foreground: 25 40% 10%; /* Very Dark Brownish Orange */
+
+    --secondary: 30 30% 25%; /* Muted dark orange */
+    --secondary-foreground: 40 40% 85%; /* Slightly muted light cream */
+
+    --muted: 30 30% 20%;
+    --muted-foreground: 40 40% 65%; /* Dimmed light cream */
+
+    --accent: 40 90% 60%; /* Vibrant Amber/Gold (can stay bright) */
+    --accent-foreground: 25 40% 10%; /* Very Dark Brownish Orange */
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 30 25% 30%; /* Dark orange border */
+    --input: 30 25% 30%;
+    --ring: 35 80% 65%; /* Lighter Burnt Orange for focus */
+
+    /* Chart colors for dark mode */
+    --chart-1: 30 70% 55%;
+    --chart-2:<?xml version="1.0" encoding="UTF-8"?>
+<changes>
+  <change>
+    <file>./styles/theme.css</file>
+    <description>Updated theme styles</description>
+    <content><![CDATA[ /* Dark Brownish
+Orange */
+
+    --card: 25 20% 15%; /* Slightly lighter dark */
+    --card-foreground: 40 40% 90%;
+
+    --popover: 25 20% 10%; /* Even darker */
+    --popover-foreground: 40 40% 90%;
+
+    --primary: 35 80% 65%; /* Lighter Burnt Orange for contrast */
+    --primary-foreground: 25 40% 10%; /* Very Dark Brownish Orange */
+
+    --secondary: 30 30% 25%; /* Muted dark orange */
+    --secondary-foreground: 40 40% 85%; /* Slightly muted light cream */
+
+    --muted: 30 30% 20%;
+    --muted-foreground: 40 40% 65%; /* Dimmed light cream */
+
+    --accent: 40 90% 60%; /* Vibrant Amber/Gold (can stay bright) */
+    --accent-foreground: 25 40% 10%; /* Very Dark Brownish Orange */
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 30 25% 30%; /* Dark orange border */
+    --input: 30 25% 30%;
+    --ring: 35 80% 65%; /* Lighter Burnt Orange for focus */
+
+    /* Chart colors for dark mode */
+    --chart-1: 30 70% 55%;
+    --chart-2: 40 60% 50%;
+    --chart-3: 25 50% 45%;
+    --chart-4: 45 70% 60%;
+    --chart-5: 20 65%<?xml version="1.0" encoding="UTF-8"?>
+<changes>
+  <change>
+    <file>./styles/theme.css</file>
+    <description>Updated theme styles</description>
+    <content><![CDATA[ /* Dark Brownish
+Orange */
+
+    --card: 25 20% 15%; /* Slightly lighter dark */
+    --card-foreground: 40 40% 90%;
+
+    --popover: 25 20% 10%; /* Even darker */
+    --popover-foreground: 40 40% 90%;
+
+    --primary: 35 80% 65%; /* Lighter Burnt Orange for contrast */
+    --primary-foreground: 25 40% 10%; /* Very Dark Brownish Orange */
+
+    --secondary: 30 30% 25%; /* Muted dark orange */
+    --secondary-foreground: 40 40% 85%; /* Slightly muted light cream */
+
+    --muted: 30 30% 20%;
+    --muted-foreground: 40 40% 65%; /* Dimmed light cream */
+
+    --accent: 40 90% 60%; /* Vibrant Amber/Gold (can stay bright) */
+    --accent-foreground: 25 40% 10%; /* Very Dark Brownish Orange */
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 30 25% 30%; /* Dark orange border */
+    --input: 30 25% 30%;
+    --ring: 35 80% 65%; /* Lighter Burnt Orange for focus */
+
+    /* Chart colors for dark mode */
+    --chart-1: 30 70% 55%;
+    --chart-2: 40 60% 50%;
+    --chart-3: 25 50% 45%;
+    --chart-4: 45 70% 60%;
+    --chart-5: 20 65% 53%;
+
+    --sidebar-background: 25 20% 10%; /* Darkest for sidebar */
+    --sidebar-foreground: 40 40% 95%;
+    --sidebar-primary: 40 90<?xml version="1.0" encoding="UTF-8"?>
+<changes>
+  <change>
+    <file>./styles/theme.css</file>
+    <description>Updated theme styles</description>
+    <content><![CDATA[ /* Dark Brownish
+Orange */
+
+    --card: 25 20% 15%; /* Slightly lighter dark */
+    --card-foreground: 40 40% 90%;
+
+    --popover: 25 20% 10%; /* Even darker */
+    --popover-foreground: 40 40% 90%;
+
+    --primary: 35 80% 65%; /* Lighter Burnt Orange for contrast */
+    --primary-foreground: 25 40% 10%; /* Very Dark Brownish Orange */
+
+    --secondary: 30 30% 25%; /* Muted dark orange */
+    --secondary-foreground: 40 40% 85%; /* Slightly muted light cream */
+
+    --muted: 30 30% 20%;
+    --muted-foreground: 40 40% 65%; /* Dimmed light cream */
+
+    --accent: 40 90% 60%; /* Vibrant Amber/Gold (can stay bright) */
+    --accent-foreground: 25 40% 10%; /* Very Dark Brownish Orange */
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 30 25% 30%; /* Dark orange border */
+    --input: 30 25% 30%;
+    --ring: 35 80% 65%; /* Lighter Burnt Orange for focus */
+
+    /* Chart colors for dark mode */
+    --chart-1: 30 70% 55%;
+    --chart-2: 40 60% 50%;
+    --chart-3: 25 50% 45%;
+    --chart-4: 45 70% 60%;
+    --chart-5: 20 65% 53%;
+
+    --sidebar-background: 25 20% 10%; /* Darkest for sidebar */
+    --sidebar-foreground: 40 40% 95%;
+    --sidebar-primary: 40 90% 60%; /* Accent color for primary actions */
+    --sidebar-primary-foreground: 25 40% 10%;
+    --sidebar-accent: 30 30% 22%; /* Muted dark orange */
+    --sidebar-<?xml version="1.0" encoding="UTF-8"?>
+<changes>
+  <change>
+    <file>./styles/theme.css</file>
+    <description>Updated theme styles</description>
+    <content><![CDATA[ /* Dark Brownish
+Orange */
+
+    --card: 25 20% 15%; /* Slightly lighter dark */
+    --card-foreground: 40 40% 90%;
+
+    --popover: 25 20% 10%; /* Even darker */
+    --popover-foreground: 40 40% 90%;
+
+    --primary: 35 80% 65%; /* Lighter Burnt Orange for contrast */
+    --primary-foreground: 25 40% 10%; /* Very Dark Brownish Orange */
+
+    --secondary: 30 30% 25%; /* Muted dark orange */
+    --secondary-foreground: 40 40% 85%; /* Slightly muted light cream */
+
+    --muted: 30 30% 20%;
+    --muted-foreground: 40 40% 65%; /* Dimmed light cream */
+
+    --accent: 40 90% 60%; /* Vibrant Amber/Gold (can stay bright) */
+    --accent-foreground: 25 40% 10%; /* Very Dark Brownish Orange */
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 30 25% 30%; /* Dark orange border */
+    --input: 30 25% 30%;
+    --ring: 35 80% 65%; /* Lighter Burnt Orange for focus */
+
+    /* Chart colors for dark mode */
+    --chart-1: 30 70% 55%;
+    --chart-2: 40 60% 50%;
+    --chart-3: 25 50% 45%;
+    --chart-4: 45 70% 60%;
+    --chart-5: 20 65% 53%;
+
+    --sidebar-background: 25 20% 10%; /* Darkest for sidebar */
+    --sidebar-foreground: 40 40% 95%;
+    --sidebar-primary: 40 90% 60%; /* Accent color for primary actions */
+    --sidebar-primary-foreground: 25 40% 10%;
+    --sidebar-accent: 30 30% 22%; /* Muted dark orange */
+    --sidebar-accent-foreground: 40 40% 95%;
+    --sidebar-border: 30 25% 25%;
+    --sidebar-ring: 35 80% 65%;
+  }
+}
+
+@layer base {
+<?xml version="1.0" encoding="UTF-8"?>
+<changes>
+  <change>
+    <file>./styles/theme.css</file>
+    <description>Updated theme styles</description>
+    <content><![CDATA[ /* Dark Brownish
+Orange */
+
+    --card: 25 20% 15%; /* Slightly lighter dark */
+    --card-foreground: 40 40% 90%;
+
+    --popover: 25 20% 10%; /* Even darker */
+    --popover-foreground: 40 40% 90%;
+
+    --primary: 35 80% 65%; /* Lighter Burnt Orange for contrast */
+    --primary-foreground: 25 40% 10%; /* Very Dark Brownish Orange */
+
+    --secondary: 30 30% 25%; /* Muted dark orange */
+    --secondary-foreground: 40 40% 85%; /* Slightly muted light cream */
+
+    --muted: 30 30% 20%;
+    --muted-foreground: 40 40% 65%; /* Dimmed light cream */
+
+    --accent: 40 90% 60%; /* Vibrant Amber/Gold (can stay bright) */
+    --accent-foreground: 25 40% 10%; /* Very Dark Brownish Orange */
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 30 25% 30%; /* Dark orange border */
+    --input: 30 25% 30%;
+    --ring: 35 80% 65%; /* Lighter Burnt Orange for focus */
+
+    /* Chart colors for dark mode */
+    --chart-1: 30 70% 55%;
+    --chart-2: 40 60% 50%;
+    --chart-3: 25 50% 45%;
+    --chart-4: 45 70% 60%;
+    --chart-5: 20 65% 53%;
+
+    --sidebar-background: 25 20% 10%; /* Darkest for sidebar */
+    --sidebar-foreground: 40 40% 95%;
+    --sidebar-primary: 40 90% 60%; /* Accent color for primary actions */
+    --sidebar-primary-foreground: 25 40% 10%;
+    --sidebar-accent: 30 30% 22%; /* Muted dark orange */
+    --sidebar-accent-foreground: 40 40% 95%;
+    --sidebar-border: 30 25% 25%;
+    --sidebar-ring: 35 80% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    /* Subtle background gradient */
+    @apply bg-gradient-to-br from-background via-secondary/10 to-background;
+    font-family:<?xml version="1.0" encoding="UTF-8"?>
+<changes>
+  <change>
+    <file>./styles/theme.css</file>
+    <description>Updated theme styles</description>
+    <content><![CDATA[ /* Dark Brownish
+Orange */
+
+    --card: 25 20% 15%; /* Slightly lighter dark */
+    --card-foreground: 40 40% 90%;
+
+    --popover: 25 20% 10%; /* Even darker */
+    --popover-foreground: 40 40% 90%;
+
+    --primary: 35 80% 65%; /* Lighter Burnt Orange for contrast */
+    --primary-foreground: 25 40% 10%; /* Very Dark Brownish Orange */
+
+    --secondary: 30 30% 25%; /* Muted dark orange */
+    --secondary-foreground: 40 40% 85%; /* Slightly muted light cream */
+
+    --muted: 30 30% 20%;
+    --muted-foreground: 40 40% 65%; /* Dimmed light cream */
+
+    --accent: 40 90% 60%; /* Vibrant Amber/Gold (can stay bright) */
+    --accent-foreground: 25 40% 10%; /* Very Dark Brownish Orange */
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 30 25% 30%; /* Dark orange border */
+    --input: 30 25% 30%;
+    --ring: 35 80% 65%; /* Lighter Burnt Orange for focus */
+
+    /* Chart colors for dark mode */
+    --chart-1: 30 70% 55%;
+    --chart-2: 40 60% 50%;
+    --chart-3: 25 50% 45%;
+    --chart-4: 45 70% 60%;
+    --chart-5: 20 65% 53%;
+
+    --sidebar-background: 25 20% 10%; /* Darkest for sidebar */
+    --sidebar-foreground: 40 40% 95%;
+    --sidebar-primary: 40 90% 60%; /* Accent color for primary actions */
+    --sidebar-primary-foreground: 25 40% 10%;
+    --sidebar-accent: 30 30% 22%; /* Muted dark orange */
+    --sidebar-accent-foreground: 40 40% 95%;
+    --sidebar-border: 30 25% 25%;
+    --sidebar-ring: 35 80% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    /* Subtle background gradient */
+    @apply bg-gradient-to-br from-background via-secondary/10 to-background;
+    font-family: var(--font-geist-sans), sans-serif; /* Modern Sans-serif */
+  }
+  h1, h2, h3, h4, h5, h6 {
+     font-family: var(--font-serif); /* Elegant Serif for headings */
+     @apply font<?xml version="1.0" encoding="UTF-8"?>
+<changes>
+  <change>
+    <file>./styles/theme.css</file>
+    <description>Updated theme styles</description>
+    <content><![CDATA[ /* Dark Brownish
+Orange */
+
+    --card: 25 20% 15%; /* Slightly lighter dark */
+    --card-foreground: 40 40% 90%;
+
+    --popover: 25 20% 10%; /* Even darker */
+    --popover-foreground: 40 40% 90%;
+
+    --primary: 35 80% 65%; /* Lighter Burnt Orange for contrast */
+    --primary-foreground: 25 40% 10%; /* Very Dark Brownish Orange */
+
+    --secondary: 30 30% 25%; /* Muted dark orange */
+    --secondary-foreground: 40 40% 85%; /* Slightly muted light cream */
+
+    --muted: 30 30% 20%;
+    --muted-foreground: 40 40% 65%; /* Dimmed light cream */
+
+    --accent: 40 90% 60%; /* Vibrant Amber/Gold (can stay bright) */
+    --accent-foreground: 25 40% 10%; /* Very Dark Brownish Orange */
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 30 25% 30%; /* Dark orange border */
+    --input: 30 25% 30%;
+    --ring: 35 80% 65%; /* Lighter Burnt Orange for focus */
+
+    /* Chart colors for dark mode */
+    --chart-1: 30 70% 55%;
+    --chart-2: 40 60% 50%;
+    --chart-3: 25 50% 45%;
+    --chart-4: 45 70% 60%;
+    --chart-5: 20 65% 53%;
+
+    --sidebar-background: 25 20% 10%; /* Darkest for sidebar */
+    --sidebar-foreground: 40 40% 95%;
+    --sidebar-primary: 40 90% 60%; /* Accent color for primary actions */
+    --sidebar-primary-foreground: 25 40% 10%;
+    --sidebar-accent: 30 30% 22%; /* Muted dark orange */
+    --sidebar-accent-foreground: 40 40% 95%;
+    --sidebar-border: 30 25% 25%;
+    --sidebar-ring: 35 80% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    /* Subtle background gradient */
+    @apply bg-gradient-to-br from-background via-secondary/10 to-background;
+    font-family: var(--font-geist-sans), sans-serif; /* Modern Sans-serif */
+  }
+  h1, h2, h3, h4, h5, h6 {
+     font-family: var(--font-serif); /* Elegant Serif for headings */
+     @apply font-medium;
+  }
+}
+
+/* Smooth Transitions & Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-<?xml version="1.0" encoding="UTF-8"?>
+<changes>
+  <change>
+    <file>./styles/theme.css</file>
+    <description>Updated theme styles</description>
+    <content><![CDATA[ /* Dark Brownish
+Orange */
+
+    --card: 25 20% 15%; /* Slightly lighter dark */
+    --card-foreground: 40 40% 90%;
+
+    --popover: 25 20% 10%; /* Even darker */
+    --popover-foreground: 40 40% 90%;
+
+    --primary: 35 80% 65%; /* Lighter Burnt Orange for contrast */
+    --primary-foreground: 25 40% 10%; /* Very Dark Brownish Orange */
+
+    --secondary: 30 30% 25%; /* Muted dark orange */
+    --secondary-foreground: 40 40% 85%; /* Slightly muted light cream */
+
+    --muted: 30 30% 20%;
+    --muted-foreground: 40 40% 65%; /* Dimmed light cream */
+
+    --accent: 40 90% 60%; /* Vibrant Amber/Gold (can stay bright) */
+    --accent-foreground: 25 40% 10%; /* Very Dark Brownish Orange */
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 30 25% 30%; /* Dark orange border */
+    --input: 30 25% 30%;
+    --ring: 35 80% 65%; /* Lighter Burnt Orange for focus */
+
+    /* Chart colors for dark mode */
+    --chart-1: 30 70% 55%;
+    --chart-2: 40 60% 50%;
+    --chart-3: 25 50% 45%;
+    --chart-4: 45 70% 60%;
+    --chart-5: 20 65% 53%;
+
+    --sidebar-background: 25 20% 10%; /* Darkest for sidebar */
+    --sidebar-foreground: 40 40% 95%;
+    --sidebar-primary: 40 90% 60%; /* Accent color for primary actions */
+    --sidebar-primary-foreground: 25 40% 10%;
+    --sidebar-accent: 30 30% 22%; /* Muted dark orange */
+    --sidebar-accent-foreground: 40 40% 95%;
+    --sidebar-border: 30 25% 25%;
+    --sidebar-ring: 35 80% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    /* Subtle background gradient */
+    @apply bg-gradient-to-br from-background via-secondary/10 to-background;
+    font-family: var(--font-geist-sans), sans-serif; /* Modern Sans-serif */
+  }
+  h1, h2, h3, h4, h5, h6 {
+     font-family: var(--font-serif); /* Elegant Serif for headings */
+     @apply font-medium;
+  }
+}
+
+/* Smooth Transitions & Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeIn 0.6s ease-out forwards; /* Slightly longer duration */
+}
+
+/* Add staggered fade-in for elements */
+.fade-in-delay-1 { animation-delay: 0.1s; opacity: 0; }
+<?xml version="1.0" encoding="UTF-8"?>
+<changes>
+  <change>
+    <file>./styles/theme.css</file>
+    <description>Updated theme styles</description>
+    <content><![CDATA[ /* Dark Brownish
+Orange */
+
+    --card: 25 20% 15%; /* Slightly lighter dark */
+    --card-foreground: 40 40% 90%;
+
+    --popover: 25 20% 10%; /* Even darker */
+    --popover-foreground: 40 40% 90%;
+
+    --primary: 35 80% 65%; /* Lighter Burnt Orange for contrast */
+    --primary-foreground: 25 40% 10%; /* Very Dark Brownish Orange */
+
+    --secondary: 30 30% 25%; /* Muted dark orange */
+    --secondary-foreground: 40 40% 85%; /* Slightly muted light cream */
+
+    --muted: 30 30% 20%;
+    --muted-foreground: 40 40% 65%; /* Dimmed light cream */
+
+    --accent: 40 90% 60%; /* Vibrant Amber/Gold (can stay bright) */
+    --accent-foreground: 25 40% 10%; /* Very Dark Brownish Orange */
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 30 25% 30%; /* Dark orange border */
+    --input: 30 25% 30%;
+    --ring: 35 80% 65%; /* Lighter Burnt Orange for focus */
+
+    /* Chart colors for dark mode */
+    --chart-1: 30 70% 55%;
+    --chart-2: 40 60% 50%;
+    --chart-3: 25 50% 45%;
+    --chart-4: 45 70% 60%;
+    --chart-5: 20 65% 53%;
+
+    --sidebar-background: 25 20% 10%; /* Darkest for sidebar */
+    --sidebar-foreground: 40 40% 95%;
+    --sidebar-primary: 40 90% 60%; /* Accent color for primary actions */
+    --sidebar-primary-foreground: 25 40% 10%;
+    --sidebar-accent: 30 30% 22%; /* Muted dark orange */
+    --sidebar-accent-foreground: 40 40% 95%;
+    --sidebar-border: 30 25% 25%;
+    --sidebar-ring: 35 80% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    /* Subtle background gradient */
+    @apply bg-gradient-to-br from-background via-secondary/10 to-background;
+    font-family: var(--font-geist-sans), sans-serif; /* Modern Sans-serif */
+  }
+  h1, h2, h3, h4, h5, h6 {
+     font-family: var(--font-serif); /* Elegant Serif for headings */
+     @apply font-medium;
+  }
+}
+
+/* Smooth Transitions & Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeIn 0.6s ease-out forwards; /* Slightly longer duration */
+}
+
+/* Add staggered fade-in for elements */
+.fade-in-delay-1 { animation-delay: 0.1s; opacity: 0; }
+.fade-in-delay-2 { animation-delay: 0.2s; opacity: 0; }
+.fade-in-delay-3 { animation-delay: 0.3s; opacity: 0; }
+.fade-in-delay-4 { animation-delay<?xml version="1.0" encoding="UTF-8"?>
+<changes>
+  <change>
+    <file>./styles/theme.css</file>
+    <description>Updated theme styles</description>
+    <content><![CDATA[ /* Dark Brownish
+Orange */
+
+    --card: 25 20% 15%; /* Slightly lighter dark */
+    --card-foreground: 40 40% 90%;
+
+    --popover: 25 20% 10%; /* Even darker */
+    --popover-foreground: 40 40% 90%;
+
+    --primary: 35 80% 65%; /* Lighter Burnt Orange for contrast */
+    --primary-foreground: 25 40% 10%; /* Very Dark Brownish Orange */
+
+    --secondary: 30 30% 25%; /* Muted dark orange */
+    --secondary-foreground: 40 40% 85%; /* Slightly muted light cream */
+
+    --muted: 30 30% 20%;
+    --muted-foreground: 40 40% 65%; /* Dimmed light cream */
+
+    --accent: 40 90% 60%; /* Vibrant Amber/Gold (can stay bright) */
+    --accent-foreground: 25 40% 10%; /* Very Dark Brownish Orange */
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 30 25% 30%; /* Dark orange border */
+    --input: 30 25% 30%;
+    --ring: 35 80% 65%; /* Lighter Burnt Orange for focus */
+
+    /* Chart colors for dark mode */
+    --chart-1: 30 70% 55%;
+    --chart-2: 40 60% 50%;
+    --chart-3: 25 50% 45%;
+    --chart-4: 45 70% 60%;
+    --chart-5: 20 65% 53%;
+
+    --sidebar-background: 25 20% 10%; /* Darkest for sidebar */
+    --sidebar-foreground: 40 40% 95%;
+    --sidebar-primary: 40 90% 60%; /* Accent color for primary actions */
+    --sidebar-primary-foreground: 25 40% 10%;
+    --sidebar-accent: 30 30% 22%; /* Muted dark orange */
+    --sidebar-accent-foreground: 40 40% 95%;
+    --sidebar-border: 30 25% 25%;
+    --sidebar-ring: 35 80% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    /* Subtle background gradient */
+    @apply bg-gradient-to-br from-background via-secondary/10 to-background;
+    font-family: var(--font-geist-sans), sans-serif; /* Modern Sans-serif */
+  }
+  h1, h2, h3, h4, h5, h6 {
+     font-family: var(--font-serif); /* Elegant Serif for headings */
+     @apply font-medium;
+  }
+}
+
+/* Smooth Transitions & Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeIn 0.6s ease-out forwards; /* Slightly longer duration */
+}
+
+/* Add staggered fade-in for elements */
+.fade-in-delay-1 { animation-delay: 0.1s; opacity: 0; }
+.fade-in-delay-2 { animation-delay: 0.2s; opacity: 0; }
+.fade-in-delay-3 { animation-delay: 0.3s; opacity: 0; }
+.fade-in-delay-4 { animation-delay: 0.4s; opacity: 0; }
+.fade-in-delay-5 { animation-delay: 0.5s; opacity: 0; } /* Added more delays */
+.fade-in-delay-6 { animation-delay: 0.6s<?xml version="1.0" encoding="UTF-8"?>
+<changes>
+  <change>
+    <file>./styles/theme.css</file>
+    <description>Updated theme styles</description>
+    <content><![CDATA[ /* Dark Brownish
+Orange */
+
+    --card: 25 20% 15%; /* Slightly lighter dark */
+    --card-foreground: 40 40% 90%;
+
+    --popover: 25 20% 10%; /* Even darker */
+    --popover-foreground: 40 40% 90%;
+
+    --primary: 35 80% 65%; /* Lighter Burnt Orange for contrast */
+    --primary-foreground: 25 40% 10%; /* Very Dark Brownish Orange */
+
+    --secondary: 30 30% 25%; /* Muted dark orange */
+    --secondary-foreground: 40 40% 85%; /* Slightly muted light cream */
+
+    --muted: 30 30% 20%;
+    --muted-foreground: 40 40% 65%; /* Dimmed light cream */
+
+    --accent: 40 90% 60%; /* Vibrant Amber/Gold (can stay bright) */
+    --accent-foreground: 25 40% 10%; /* Very Dark Brownish Orange */
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 30 25% 30%; /* Dark orange border */
+    --input: 30 25% 30%;
+    --ring: 35 80% 65%; /* Lighter Burnt Orange for focus */
+
+    /* Chart colors for dark mode */
+    --chart-1: 30 70% 55%;
+    --chart-2: 40 60% 50%;
+    --chart-3: 25 50% 45%;
+    --chart-4: 45 70% 60%;
+    --chart-5: 20 65% 53%;
+
+    --sidebar-background: 25 20% 10%; /* Darkest for sidebar */
+    --sidebar-foreground: 40 40% 95%;
+    --sidebar-primary: 40 90% 60%; /* Accent color for primary actions */
+    --sidebar-primary-foreground: 25 40% 10%;
+    --sidebar-accent: 30 30% 22%; /* Muted dark orange */
+    --sidebar-accent-foreground: 40 40% 95%;
+    --sidebar-border: 30 25% 25%;
+    --sidebar-ring: 35 80% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    /* Subtle background gradient */
+    @apply bg-gradient-to-br from-background via-secondary/10 to-background;
+    font-family: var(--font-geist-sans), sans-serif; /* Modern Sans-serif */
+  }
+  h1, h2, h3, h4, h5, h6 {
+     font-family: var(--font-serif); /* Elegant Serif for headings */
+     @apply font-medium;
+  }
+}
+
+/* Smooth Transitions & Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeIn 0.6s ease-out forwards; /* Slightly longer duration */
+}
+
+/* Add staggered fade-in for elements */
+.fade-in-delay-1 { animation-delay: 0.1s; opacity: 0; }
+.fade-in-delay-2 { animation-delay: 0.2s; opacity: 0; }
+.fade-in-delay-3 { animation-delay: 0.3s; opacity: 0; }
+.fade-in-delay-4 { animation-delay: 0.4s; opacity: 0; }
+.fade-in-delay-5 { animation-delay: 0.5s; opacity: 0; } /* Added more delays */
+.fade-in-delay-6 { animation-delay: 0.6s; opacity: 0; }
+
+/* Add smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Enhance button prominence slightly (adjust as needed) */
+@layer components {
+  .btn-cta {
+     @apply bg-primary<?xml version="1.0" encoding="UTF-8"?>
+<changes>
+  <change>
+    <file>./styles/theme.css</file>
+    <description>Updated theme styles</description>
+    <content><![CDATA[ /* Dark Brownish
+Orange */
+
+    --card: 25 20% 15%; /* Slightly lighter dark */
+    --card-foreground: 40 40% 90%;
+
+    --popover: 25 20% 10%; /* Even darker */
+    --popover-foreground: 40 40% 90%;
+
+    --primary: 35 80% 65%; /* Lighter Burnt Orange for contrast */
+    --primary-foreground: 25 40% 10%; /* Very Dark Brownish Orange */
+
+    --secondary: 30 30% 25%; /* Muted dark orange */
+    --secondary-foreground: 40 40% 85%; /* Slightly muted light cream */
+
+    --muted: 30 30% 20%;
+    --muted-foreground: 40 40% 65%; /* Dimmed light cream */
+
+    --accent: 40 90% 60%; /* Vibrant Amber/Gold (can stay bright) */
+    --accent-foreground: 25 40% 10%; /* Very Dark Brownish Orange */
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 30 25% 30%; /* Dark orange border */
+    --input: 30 25% 30%;
+    --ring: 35 80% 65%; /* Lighter Burnt Orange for focus */
+
+    /* Chart colors for dark mode */
+    --chart-1: 30 70% 55%;
+    --chart-2: 40 60% 50%;
+    --chart-3: 25 50% 45%;
+    --chart-4: 45 70% 60%;
+    --chart-5: 20 65% 53%;
+
+    --sidebar-background: 25 20% 10%; /* Darkest for sidebar */
+    --sidebar-foreground: 40 40% 95%;
+    --sidebar-primary: 40 90% 60%; /* Accent color for primary actions */
+    --sidebar-primary-foreground: 25 40% 10%;
+    --sidebar-accent: 30 30% 22%; /* Muted dark orange */
+    --sidebar-accent-foreground: 40 40% 95%;
+    --sidebar-border: 30 25% 25%;
+    --sidebar-ring: 35 80% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    /* Subtle background gradient */
+    @apply bg-gradient-to-br from-background via-secondary/10 to-background;
+    font-family: var(--font-geist-sans), sans-serif; /* Modern Sans-serif */
+  }
+  h1, h2, h3, h4, h5, h6 {
+     font-family: var(--font-serif); /* Elegant Serif for headings */
+     @apply font-medium;
+  }
+}
+
+/* Smooth Transitions & Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeIn 0.6s ease-out forwards; /* Slightly longer duration */
+}
+
+/* Add staggered fade-in for elements */
+.fade-in-delay-1 { animation-delay: 0.1s; opacity: 0; }
+.fade-in-delay-2 { animation-delay: 0.2s; opacity: 0; }
+.fade-in-delay-3 { animation-delay: 0.3s; opacity: 0; }
+.fade-in-delay-4 { animation-delay: 0.4s; opacity: 0; }
+.fade-in-delay-5 { animation-delay: 0.5s; opacity: 0; } /* Added more delays */
+.fade-in-delay-6 { animation-delay: 0.6s; opacity: 0; }
+
+/* Add smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Enhance button prominence slightly (adjust as needed) */
+@layer components {
+  .btn-cta {
+     @apply bg-primary text-primary-foreground shadow-md hover:bg-primary/90 transform hover:scale-105 transition-all duration-200;
+  }
+  .btn-cta-secondary {
+      @apply bg-accent text-accent-foreground shadow-md hover:bg-<?xml version="1.0" encoding="UTF-8"?>
+<changes>
+  <change>
+    <file>./styles/theme.css</file>
+    <description>Updated theme styles</description>
+    <content><![CDATA[ /* Dark Brownish
+Orange */
+
+    --card: 25 20% 15%; /* Slightly lighter dark */
+    --card-foreground: 40 40% 90%;
+
+    --popover: 25 20% 10%; /* Even darker */
+    --popover-foreground: 40 40% 90%;
+
+    --primary: 35 80% 65%; /* Lighter Burnt Orange for contrast */
+    --primary-foreground: 25 40% 10%; /* Very Dark Brownish Orange */
+
+    --secondary: 30 30% 25%; /* Muted dark orange */
+    --secondary-foreground: 40 40% 85%; /* Slightly muted light cream */
+
+    --muted: 30 30% 20%;
+    --muted-foreground: 40 40% 65%; /* Dimmed light cream */
+
+    --accent: 40 90% 60%; /* Vibrant Amber/Gold (can stay bright) */
+    --accent-foreground: 25 40% 10%; /* Very Dark Brownish Orange */
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 30 25% 30%; /* Dark orange border */
+    --input: 30 25% 30%;
+    --ring: 35 80% 65%; /* Lighter Burnt Orange for focus */
+
+    /* Chart colors for dark mode */
+    --chart-1: 30 70% 55%;
+    --chart-2: 40 60% 50%;
+    --chart-3: 25 50% 45%;
+    --chart-4: 45 70% 60%;
+    --chart-5: 20 65% 53%;
+
+    --sidebar-background: 25 20% 10%; /* Darkest for sidebar */
+    --sidebar-foreground: 40 40% 95%;
+    --sidebar-primary: 40 90% 60%; /* Accent color for primary actions */
+    --sidebar-primary-foreground: 25 40% 10%;
+    --sidebar-accent: 30 30% 22%; /* Muted dark orange */
+    --sidebar-accent-foreground: 40 40% 95%;
+    --sidebar-border: 30 25% 25%;
+    --sidebar-ring: 35 80% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    /* Subtle background gradient */
+    @apply bg-gradient-to-br from-background via-secondary/10 to-background;
+    font-family: var(--font-geist-sans), sans-serif; /* Modern Sans-serif */
+  }
+  h1, h2, h3, h4, h5, h6 {
+     font-family: var(--font-serif); /* Elegant Serif for headings */
+     @apply font-medium;
+  }
+}
+
+/* Smooth Transitions & Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeIn 0.6s ease-out forwards; /* Slightly longer duration */
+}
+
+/* Add staggered fade-in for elements */
+.fade-in-delay-1 { animation-delay: 0.1s; opacity: 0; }
+.fade-in-delay-2 { animation-delay: 0.2s; opacity: 0; }
+.fade-in-delay-3 { animation-delay: 0.3s; opacity: 0; }
+.fade-in-delay-4 { animation-delay: 0.4s; opacity: 0; }
+.fade-in-delay-5 { animation-delay: 0.5s; opacity: 0; } /* Added more delays */
+.fade-in-delay-6 { animation-delay: 0.6s; opacity: 0; }
+
+/* Add smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Enhance button prominence slightly (adjust as needed) */
+@layer components {
+  .btn-cta {
+     @apply bg-primary text-primary-foreground shadow-md hover:bg-primary/90 transform hover:scale-105 transition-all duration-200;
+  }
+  .btn-cta-secondary {
+      @apply bg-accent text-accent-foreground shadow-md hover:bg-accent/90 transform hover:scale-105 transition-all duration-200;
+  }
+}
+
+/* Example wax texture pattern (requires careful implementation or an actual image) */
+/* .wax-background {
+  background-image: radial-gradient(hsl(<?xml version="1.0" encoding="UTF-8"?>
+<changes>
+  <change>
+    <file>./styles/theme.css</file>
+    <description>Updated theme styles</description>
+    <content><![CDATA[ /* Dark Brownish
+Orange */
+
+    --card: 25 20% 15%; /* Slightly lighter dark */
+    --card-foreground: 40 40% 90%;
+
+    --popover: 25 20% 10%; /* Even darker */
+    --popover-foreground: 40 40% 90%;
+
+    --primary: 35 80% 65%; /* Lighter Burnt Orange for contrast */
+    --primary-foreground: 25 40% 10%; /* Very Dark Brownish Orange */
+
+    --secondary: 30 30% 25%; /* Muted dark orange */
+    --secondary-foreground: 40 40% 85%; /* Slightly muted light cream */
+
+    --muted: 30 30% 20%;
+    --muted-foreground: 40 40% 65%; /* Dimmed light cream */
+
+    --accent: 40 90% 60%; /* Vibrant Amber/Gold (can stay bright) */
+    --accent-foreground: 25 40% 10%; /* Very Dark Brownish Orange */
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 30 25% 30%; /* Dark orange border */
+    --input: 30 25% 30%;
+    --ring: 35 80% 65%; /* Lighter Burnt Orange for focus */
+
+    /* Chart colors for dark mode */
+    --chart-1: 30 70% 55%;
+    --chart-2: 40 60% 50%;
+    --chart-3: 25 50% 45%;
+    --chart-4: 45 70% 60%;
+    --chart-5: 20 65% 53%;
+
+    --sidebar-background: 25 20% 10%; /* Darkest for sidebar */
+    --sidebar-foreground: 40 40% 95%;
+    --sidebar-primary: 40 90% 60%; /* Accent color for primary actions */
+    --sidebar-primary-foreground: 25 40% 10%;
+    --sidebar-accent: 30 30% 22%; /* Muted dark orange */
+    --sidebar-accent-foreground: 40 40% 95%;
+    --sidebar-border: 30 25% 25%;
+    --sidebar-ring: 35 80% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    /* Subtle background gradient */
+    @apply bg-gradient-to-br from-background via-secondary/10 to-background;
+    font-family: var(--font-geist-sans), sans-serif; /* Modern Sans-serif */
+  }
+  h1, h2, h3, h4, h5, h6 {
+     font-family: var(--font-serif); /* Elegant Serif for headings */
+     @apply font-medium;
+  }
+}
+
+/* Smooth Transitions & Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeIn 0.6s ease-out forwards; /* Slightly longer duration */
+}
+
+/* Add staggered fade-in for elements */
+.fade-in-delay-1 { animation-delay: 0.1s; opacity: 0; }
+.fade-in-delay-2 { animation-delay: 0.2s; opacity: 0; }
+.fade-in-delay-3 { animation-delay: 0.3s; opacity: 0; }
+.fade-in-delay-4 { animation-delay: 0.4s; opacity: 0; }
+.fade-in-delay-5 { animation-delay: 0.5s; opacity: 0; } /* Added more delays */
+.fade-in-delay-6 { animation-delay: 0.6s; opacity: 0; }
+
+/* Add smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Enhance button prominence slightly (adjust as needed) */
+@layer components {
+  .btn-cta {
+     @apply bg-primary text-primary-foreground shadow-md hover:bg-primary/90 transform hover:scale-105 transition-all duration-200;
+  }
+  .btn-cta-secondary {
+      @apply bg-accent text-accent-foreground shadow-md hover:bg-accent/90 transform hover:scale-105 transition-all duration-200;
+  }
+}
+
+/* Example wax texture pattern (requires careful implementation or an actual image) */
+/* .wax-background {
+  background-image: radial-gradient(hsl(var(--secondary)) 1px, transparent 1px);
+  background-size: 10px 10px;
+} */
+
+/* Candle glow effect (example) */
+/* .glow-effect {
+  box-shadow: 0 0 15<?xml version="1.0" encoding="UTF-8"?>
+<changes>
+  <change>
+    <file>./styles/theme.css</file>
+    <description>Updated theme styles</description>
+    <content><![CDATA[ /* Dark Brownish
+Orange */
+
+    --card: 25 20% 15%; /* Slightly lighter dark */
+    --card-foreground: 40 40% 90%;
+
+    --popover: 25 20% 10%; /* Even darker */
+    --popover-foreground: 40 40% 90%;
+
+    --primary: 35 80% 65%; /* Lighter Burnt Orange for contrast */
+    --primary-foreground: 25 40% 10%; /* Very Dark Brownish Orange */
+
+    --secondary: 30 30% 25%; /* Muted dark orange */
+    --secondary-foreground: 40 40% 85%; /* Slightly muted light cream */
+
+    --muted: 30 30% 20%;
+    --muted-foreground: 40 40% 65%; /* Dimmed light cream */
+
+    --accent: 40 90% 60%; /* Vibrant Amber/Gold (can stay bright) */
+    --accent-foreground: 25 40% 10%; /* Very Dark Brownish Orange */
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 30 25% 30%; /* Dark orange border */
+    --input: 30 25% 30%;
+    --ring: 35 80% 65%; /* Lighter Burnt Orange for focus */
+
+    /* Chart colors for dark mode */
+    --chart-1: 30 70% 55%;
+    --chart-2: 40 60% 50%;
+    --chart-3: 25 50% 45%;
+    --chart-4: 45 70% 60%;
+    --chart-5: 20 65% 53%;
+
+    --sidebar-background: 25 20% 10%; /* Darkest for sidebar */
+    --sidebar-foreground: 40 40% 95%;
+    --sidebar-primary: 40 90% 60%; /* Accent color for primary actions */
+    --sidebar-primary-foreground: 25 40% 10%;
+    --sidebar-accent: 30 30% 22%; /* Muted dark orange */
+    --sidebar-accent-foreground: 40 40% 95%;
+    --sidebar-border: 30 25% 25%;
+    --sidebar-ring: 35 80% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    /* Subtle background gradient */
+    @apply bg-gradient-to-br from-background via-secondary/10 to-background;
+    font-family: var(--font-geist-sans), sans-serif; /* Modern Sans-serif */
+  }
+  h1, h2, h3, h4, h5, h6 {
+     font-family: var(--font-serif); /* Elegant Serif for headings */
+     @apply font-medium;
+  }
+}
+
+/* Smooth Transitions & Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeIn 0.6s ease-out forwards; /* Slightly longer duration */
+}
+
+/* Add staggered fade-in for elements */
+.fade-in-delay-1 { animation-delay: 0.1s; opacity: 0; }
+.fade-in-delay-2 { animation-delay: 0.2s; opacity: 0; }
+.fade-in-delay-3 { animation-delay: 0.3s; opacity: 0; }
+.fade-in-delay-4 { animation-delay: 0.4s; opacity: 0; }
+.fade-in-delay-5 { animation-delay: 0.5s; opacity: 0; } /* Added more delays */
+.fade-in-delay-6 { animation-delay: 0.6s; opacity: 0; }
+
+/* Add smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Enhance button prominence slightly (adjust as needed) */
+@layer components {
+  .btn-cta {
+     @apply bg-primary text-primary-foreground shadow-md hover:bg-primary/90 transform hover:scale-105 transition-all duration-200;
+  }
+  .btn-cta-secondary {
+      @apply bg-accent text-accent-foreground shadow-md hover:bg-accent/90 transform hover:scale-105 transition-all duration-200;
+  }
+}
+
+/* Example wax texture pattern (requires careful implementation or an actual image) */
+/* .wax-background {
+  background-image: radial-gradient(hsl(var(--secondary)) 1px, transparent 1px);
+  background-size: 10px 10px;
+} */
+
+/* Candle glow effect (example) */
+/* .glow-effect {
+  box-shadow: 0 0 15px 5px hsla(var(--accent), 0.4);
+} */

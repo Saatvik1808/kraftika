@@ -26,9 +26,9 @@ export async function sendContactEmail(formData: ContactFormData): Promise<{ suc
     const { name, email, phone, message } = validatedData;
     const recipientEmail = "saatvik.shrivastava08@gmail.com"; // Target email
 
-    const subject = `New Contact Form Submission from ${name}`;
+    const subject = `New Kraftika Contact Form Submission from ${name}`; // Updated Brand Name
     const body = `
-      You received a new message from the Aromatic Flames contact form:
+      You received a new message from the Kraftika contact form: // Updated Brand Name
 
       Name: ${name}
       Email: ${email}
@@ -37,11 +37,17 @@ export async function sendContactEmail(formData: ContactFormData): Promise<{ suc
       ${message}
     `;
 
-    await sendEmail({
-      to: recipientEmail,
-      subject: subject,
-      body: body,
-    });
+    // Simulate sending email - replace with actual implementation
+    // await sendEmail({
+    //   to: recipientEmail,
+    //   subject: subject,
+    //   body: body,
+    // });
+    console.log("Simulating email send to:", recipientEmail);
+    console.log("Subject:", subject);
+    console.log("Body:", body);
+    await new Promise(resolve => setTimeout(resolve, 500)); // Simulate network delay
+
 
     console.log("Contact email sent successfully to:", recipientEmail);
     return { success: true };
@@ -56,3 +62,4 @@ export async function sendContactEmail(formData: ContactFormData): Promise<{ suc
     return { success: false, error: "Failed to send message due to a server error." };
   }
 }
+```

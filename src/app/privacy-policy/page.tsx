@@ -1,12 +1,13 @@
 
+
 export default function PrivacyPolicyPage() {
   return (
-    <div className="container mx-auto px-4 py-8 prose prose-stone dark:prose-invert max-w-3xl">
-      <h1 className="text-3xl font-serif font-semibold mb-6">Privacy Policy</h1>
+    <div className="container mx-auto px-4 py-8 prose prose-orange dark:prose-invert max-w-3xl"> {/* Updated prose class if applicable */}
+      <h1 className="text-3xl font-serif font-semibold mb-6 text-primary">Privacy Policy</h1>
       <p>Last updated: {new Date().toLocaleDateString()}</p>
 
       <p>
-        Welcome to Aromatic Flames! We are committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website. Please read this privacy policy carefully. If you do not agree with the terms of this privacy policy, please do not access the site.
+        Welcome to Kraftika! We are committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website. Please read this privacy policy carefully. If you do not agree with the terms of this privacy policy, please do not access the site. {/* Updated Brand Name */}
       </p>
 
       <h2 className="text-2xl font-serif font-semibold mt-6 mb-3">Collection of Your Information</h2>
@@ -60,7 +61,7 @@ export default function PrivacyPolicyPage() {
 
       <h2 className="text-2xl font-serif font-semibold mt-6 mb-3">Contact Us</h2>
       <p>
-        If you have questions or comments about this Privacy Policy, please contact us at: [Your Contact Email - e.g., privacy@aromaticflames.com or saatvik.shrivastava08@gmail.com]
+        If you have questions or comments about this Privacy Policy, please contact us at: [Your Contact Email - e.g., privacy@kraftika.com or saatvik.shrivastava08@gmail.com] {/* Updated Placeholder Email */}
       </p>
        <p className="mt-8 text-sm text-muted-foreground">
            Please note: This is a template privacy policy. You should consult with a legal professional to ensure it meets all legal requirements for your specific business and location.
@@ -69,3 +70,4 @@ export default function PrivacyPolicyPage() {
   );
 }
 
+```
